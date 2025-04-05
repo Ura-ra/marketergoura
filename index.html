@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고우라 | 포트폴리오</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      cursor: url('mouse-cursor.png'), auto;
+    }
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #ffffff;
+      color: #111;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #333;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #4c517d;
+    }
+    section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #4c517d;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .gallery-item {
+      position: relative;
+      width: 100%;
+      padding-top: 75%;
+      overflow: hidden;
+      border-radius: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      padding: 1rem;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    .overlay a {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #ffffff;
+      color: #1e1e1e;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    footer {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>고우라의 포트폴리오</h1>
+    <p>불편함이 스치면, 기획이 시작됩니다</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <img src="home-main.png" alt="슬로건 이미지" style="width:100%; max-width:800px; display:block; margin: 0 auto;">
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="about-main.png" alt="경력 소개 이미지" style="width:100%; max-width:800px; display:block; margin: 0 auto;">
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="project1.html">
+          <img src="project1-thumb.png" alt="메모리커넥트">
+          <div class="overlay">
+            메모리커넥트
+            <a href="project1.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project2.html">
+          <img src="project2-thumb.png" alt="퍼스널 TEA">
+          <div class="overlay">
+            퍼스널 TEA
+            <a href="project2.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project3.html">
+          <img src="project3-thumb.png" alt="TASK-UP">
+          <div class="overlay">
+            TASK-UP
+            <a href="project3.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project4.html">
+          <img src="project4-thumb.png" alt="패션리마인드">
+          <div class="overlay">
+            패션리마인드
+            <a href="project4.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project5.html">
+          <img src="project5-thumb.png" alt="시니어 뱅크">
+          <div class="overlay">
+            시니어 뱅크
+            <a href="project5.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project6.html">
+          <img src="project6-thumb.png" alt="날씨를 입다">
+          <div class="overlay">
+            날씨를 입다
+            <a href="project6.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project7.html">
+          <img src="project7-thumb.png" alt="상상게임">
+          <div class="overlay">
+            상상게임
+            <a href="project7.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project8.html">
+          <img src="project8-thumb.png" alt="스타일키">
+          <div class="overlay">
+            스타일키
+            <a href="project8.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="project9.html">
+          <img src="project9-thumb.png" alt="AI로 1인 기업 창업하기">
+          <div class="overlay">
+            AI로 1인 기업 창업하기
+            <a href="project9.html">상세보기</a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: goura00@naver.com</p>
+    <p>Phone: 010-2680-0463</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Goura. All rights reserved.
+  </footer>
+</body>
+</html>
